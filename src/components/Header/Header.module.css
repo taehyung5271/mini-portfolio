@@ -29,3 +29,28 @@
 .nav a:hover {
   color: #4a90d9;
 }
+
+.logoutButton {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+}
+
+.logoutButton:hover {
+  color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+    .header{
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    
+    .nav {
+        gap: 16px;
+    }
+}

@@ -1,0 +1,162 @@
+.problems {
+  background-color: #fff;
+  padding: 40px 24px;
+  border-radius: 8px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #999;
+}
+
+.addButton {
+  padding: 8px 20px;
+  background-color: #4a90d9;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.addButton:hover {
+  background-color: #357abd;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.cardTop {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.platform {
+  padding: 4px 10px;
+  background-color: #e8e8e8;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #555;
+  font-weight: 600;
+}
+
+.difficulty {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.쉬움 {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.보통 {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.어려움 {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.done {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.progress {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.retry {
+  background-color: #fce7f3;
+  color: #9d174d;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.cardTitle a {
+  color: #4a90d9;
+}
+
+.cardTitle a:hover {
+  text-decoration: underline;
+}
+
+.memo {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.editButton {
+  padding: 6px 14px;
+  background-color: #e8e8e8;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #333;
+}
+
+.editButton:hover {
+  background-color: #ddd;
+}
+
+.deleteButton {
+  padding: 6px 14px;
+  background-color: transparent;
+  border: 1px solid #e74c3c;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #e74c3c;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: #fee2e2;
+}

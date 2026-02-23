@@ -1,0 +1,58 @@
+.blog {
+    background-color: #fff;
+    padding: 40px 24px;
+    border-radius: 8px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 32px;
+}
+
+.postList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.postCard {
+    display: block;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+
+.postCard:hover {
+    background-color: #f0f0f0;
+}
+
+.postTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.postSummary {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.postMeta {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: #999;
+}
