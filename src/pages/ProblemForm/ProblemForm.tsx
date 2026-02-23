@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { supabase } from '../../api/supabase';
 import styles from './ProblemForm.module.css';
 import { problemApi } from '../../api/problemApi';
 
