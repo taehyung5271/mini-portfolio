@@ -4,20 +4,41 @@ import type { Skill } from '../../types/Skill';
 import { useQuery } from '@tanstack/react-query';
 
 const Skills = () => {
+    //     const { data: skills = [], isLoading, error } = useQuery<Skill[]>({
+    //     queryKey: ['skills'],
+    //     queryFn: async () => {
+    //       const { data, error } = await supabase
+    //         .from('skills')
+    //         .select('*, skill_descriptions(id, content)')
+    //         .order('id');
+    //       if (error) throw error;
+    //       return data;
+    //     },
+    //   });
     const { data: skills = [], isLoading, error } = useQuery<Skill[]>({
-    queryKey: ['skills'],
-    queryFn: async () => {
-      const { data, error } = await supabase
-        .from('skills')
-        .select('*, skill_descriptions(id, content)')
-        .order('id');
-      if (error) throw error;
-      return data;
-    },
-  });
+        queryKey: ['skills'],
+        queryFn: async () => {
+            // 1. 직접 쿼리 결과 확인을 위해 로그 추가
+            const result = await supabase
+                .from('skills')
+                .select('*, skill_descriptions(id, content)')
+                .order('id');
 
-  if (isLoading) return <p>로딩 중...</p>;
-  if (error) return <p>에러가 발생했습니다.</p>;
+            // 2. 만약 에러가 있다면 상세히 출력
+            if (result.error) {
+                console.error("❌ Supabase 에러 발생:", result.error.message, result.error.details);
+                throw result.error;
+            }
+
+            // 3. 데이터가 들어왔는지, 배열 형태인지 확인
+            console.log("✅ Supabase에서 받은 원본 데이터:", result.data);
+
+            return result.data as Skill[];
+        },
+    });
+
+    if (isLoading) return <p>로딩 중...</p>;
+    if (error) return <p>에러가 발생했습니다.</p>;
 
     const categories = ['Frontend', 'Backend', 'Tools'];
 
